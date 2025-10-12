@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SecureServices</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-pki.css">
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="header_bottom">
+            <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="../index.html">
+                  <span>
+                    SecureServices
+                  </span>
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../about.html"> About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+</section>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Digital Signatures</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .service {
+            background-color: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service h3 {
+            color: #4A90E2;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .service p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        /* Style for file upload */
+        input[type="file"] {
+            padding: 12px;
+            font-size: 1.1em;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="file"]:hover {
+            border-color: #4A90E2;
+            background-color: #e8f1fe;
+        }
+
+        /* Style for select dropdown */
+        select {
+            padding: 12px;
+            font-size: 1.1em;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        select:hover {
+            border-color: #4A90E2;
+            background-color: #e8f1fe;
+        }
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #4A90E2;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="service">
+        <h3>Secure Digital Signatures</h3>
+        <p>Ensure the integrity and authenticity of your digital documents with our Secure Digital Signatures service. Perfect for legal documents, contracts, and other sensitive information requiring verified signatures.</p>
+        <form id="uploadForm" action="/sign-document" method="post" enctype="multipart/form-data">
+            <label for="document">Upload Document:</label>
+            <input type="file" id="document" name="document" required>
+
+            <label for="documentType">Select Document Type:</label>
+            <select id="documentType" name="documentType" required>
+                <option value="contract">Contract</option>
+                <option value="legal">Legal Document</option>
+                <option value="financial">Financial Document</option>
+            </select>  
+
+            <input type="submit" value="Sign Document">
+        </form>
+    </div>
+
+</body>
+
+
+
+
+
+    <!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+    <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">SecureServices</a>
+    </p>
+    </div>
+</footer>
+<!-- footer section -->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<script src="js/custom.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+<!-- End Google Map -->
+
+</body>
+
+</html>

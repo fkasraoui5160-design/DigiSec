@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+      <!-- Basic -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <!-- Site Metas -->
+      <meta name="keywords" content="" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+    
+      <title>DigiSec</title>
+    
+      <!-- slider stylesheet -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      <!-- font awesome style -->
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet" />
+      <!-- responsive style -->
+      <link href="css/responsive.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/style-pki.css">
+    
+    </head>
+    
+    <body>
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+              <div class="header_bottom">
+                <div class="container-fluid">
+                  <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="../index.html">
+                      <span>
+                       DigiSec
+                      </span>
+                    </a>
+        
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class=""> </span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                          <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../about.html"> About</a>
+                        </li>
+                        <li class="nav-item active">
+                          <a class="nav-link" href="../service.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../contact.html">Contact Us</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </header>
+            <!-- end header section -->
+        </div>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Générateur de Mot de Passe</title>
+        <style>
+    
+    body {
+           
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           background-color: #f7f7f7;
+           margin: 0;
+           padding: 20px;
+       }
+       .container {
+           max-width: 700px;
+           margin: 0 auto;
+           background-color: #fff;
+           padding: 40px;
+           border-radius: 10px;
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+       }
+       h1 {
+           text-align: center;
+           color: #333;
+           margin-bottom: 30px;
+           font-size: 3em;
+           font-weight: bold;
+           letter-spacing: 2px;
+           text-transform: uppercase;
+           color:rgb(22, 7, 181);
+       }
+       h2 {
+           font-size: 1.8em;
+           margin-bottom: 15px;
+           color: #333;
+           text-align: center;
+           font-weight: bold;
+       }
+       .option {
+           margin-bottom: 30px;
+           background-color: #f1f1f1;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       }
+       .input-container {
+           margin-bottom: 20px;
+           text-align: center;
+       }
+       input[type="password"], input[type="text"], input[type="number"] {
+           padding: 9px;
+           font-size: 18px;
+           width: 100%;
+           border: 2px solid #ccc;
+           border-radius: 5px;
+           margin-bottom: 10px;
+           transition: border-color 0.3s;
+       }
+       input[type="password"]:focus, input[type="text"]:focus, input[type="number"]:focus {
+           border-color:rgb(6, 4, 90);
+           outline: none;
+       }
+       button {
+           padding: 12px 30px;
+           background-color: rgb(22, 7, 181);
+           color: white;
+           font-size: 16px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s;
+       }
+       button:hover {
+           background-color: rgb(6, 4, 90);
+       }
+       .result {
+           margin-top: 20px;
+           padding: 15px;
+           background-color: #f0f0f0;
+           border-radius: 5px;
+           border: 1px solid #ddd;
+           text-align: center;
+           font-size: 1.2em;
+       }
+       .result strong {
+           color: #333;
+       }
+       .complexity-errors {
+           background-color: #ffebe6;
+           border: 1px solid #f5c6cb;
+           color: #721c24;
+           padding: 15px;
+           margin-top: 20px;
+           border-radius: 5px;
+       }
+       .complexity-success {
+           background-color: #d4edda;
+           border: 1px solid #c3e6cb;
+           color: rgb(6, 4, 90);
+           padding: 15px;
+           margin-top: 20px;
+           border-radius: 5px;
+       }
+       .footer {
+           text-align: center;
+           font-size: 14px;
+           color: #888;
+           margin-top: 40px;
+       }
+       .copy-btn {
+           background-color: rgb(6, 4, 90);
+           border: none;
+           padding: 10px 20px;
+           color: white;
+           font-size: 16px;
+           cursor: pointer;
+           border-radius: 5px;
+           margin-top: 10px;
+       }
+       .copy-btn:hover {
+           background-color: #0056b3;
+       }
+       @keyframes fadeIn {
+           0% { opacity: 0; }
+           100% { opacity: 1; }
+       }
+   </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Générateur de Mot de Passe</h1>
+
+        <!-- Première option : Générer un mot de passe fort -->
+        <div class="option">
+            <h2>Générer un Mot de Passe Fort</h2>
+            <div class="input-container">
+                <input type="number" id="password_length" min="8" max="32" value="12" placeholder="Longueur du mot de passe" required>
+                <button onclick="generatePassword()">Générer un Mot de Passe</button>
+            </div>
+
+            <div id="generatedPasswordResult" class="result" style="display:none;">
+                <strong>Mot de passe généré : </strong><span id="generatedPassword"></span>
+                <button class="copy-btn" onclick="copyToClipboard()">Copier dans le Presse-papiers</button>
+            </div>
+        </div>
+
+        <!-- Deuxième option : Vérifier la complexité d'un mot de passe -->
+        <div class="option">
+            <h2>Vérifier la Complexité d'un Mot de Passe</h2>
+            <div class="input-container">
+                <input type="password" id="user_password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="input-container">
+                <button onclick="checkPasswordComplexity()">Vérifier la Complexité</button>
+            </div>
+
+            <div id="complexityResult" class="result" style="display:none;">
+                <h3>Résultats de la Vérification :</h3>
+                <div id="complexityErrors" class="complexity-errors" style="display:none;"></div>
+                <div id="complexitySuccess" class="complexity-success" style="display:none;">
+                    <strong>Le mot de passe respecte toutes les exigences de complexité !</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+    <p>&copy; DigiSec. Tous droits réservés.</p>
+    </div>
+
+    <script>
+        // Fonction pour générer un mot de passe fort
+        function generatePassword() {
+            const length = parseInt(document.getElementById("password_length").value) || 12;
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:,.<>?';
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            document.getElementById("generatedPassword").innerText = password;
+            document.getElementById("generatedPasswordResult").style.display = "block";
+        }
+
+        // Fonction pour copier le mot de passe dans le presse-papiers
+        function copyToClipboard() {
+            const password = document.getElementById("generatedPassword").innerText;
+            const textArea = document.createElement("textarea");
+            textArea.value = password;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("Mot de passe copié dans le presse-papiers !");
+        }
+
+        // Fonction pour vérifier la complexité du mot de passe
+        function checkPasswordComplexity() {
+            const password = document.getElementById("user_password").value;
+            const errors = [];
+            
+            if (!/[A-Z]/.test(password)) errors.push("Le mot de passe doit contenir au moins une lettre majuscule.");
+            if (!/[a-z]/.test(password)) errors.push("Le mot de passe doit contenir au moins une lettre minuscule.");
+            if (!/\d/.test(password)) errors.push("Le mot de passe doit contenir au moins un chiffre.");
+            if (!/[!@#$%^&*()_+\-=\[\]{};:\'",<>\./?\\|]/.test(password)) errors.push("Le mot de passe doit contenir au moins un caractère spécial.");
+            if (password.length < 8) errors.push("Le mot de passe doit comporter au moins 8 caractères.");
+
+            if (errors.length > 0) {
+                document.getElementById("complexityErrors").innerHTML = errors.join("<br>");
+                document.getElementById("complexityErrors").style.display = "block";
+                document.getElementById("complexitySuccess").style.display = "none";
+            } else {
+                document.getElementById("complexityErrors").style.display = "none";
+                document.getElementById("complexitySuccess").style.display = "block";
+            }
+            document.getElementById("complexityResult").style.display = "block";
+        }
+    </script>
+
+
+
+</body>
+</html>

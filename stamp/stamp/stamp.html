@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>digisec</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-stamp.css">
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="header_bottom">
+            <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="../../index.html">
+                  <span>
+                    digisec
+                  </span>
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="../../index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../../about.html"> About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../../service.html">Services <span class="sr-only">(current)</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../../about.html">about us <span class="sr-only">(current)</a>
+                    </li>
+                    <li class="nav-item">
+                       
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <div class="container">
+        <h1>Stamp Services</h1>
+        <br/>
+        <h2>Draw your Stamp</h2>
+        <canvas id="stampCanvas" width="200" height="200"></canvas>
+        <button onclick="saveStamp()">Save Stamp</button>
+        <h2>Or Upload a Stamp</h2>
+        <input type="file" id="stampInput" accept="image/*">
+        <h2>Apply Stamp to Document</h2>
+        <input type="file" id="documentInput" accept="image/*">
+        <button onclick="applyStamp()">Apply Stamp</button>
+        <img id="documentImage" alt="Document will appear here">
+        <br />
+        <button onclick="saveFinalImage()">Save Final Image</button>
+    </div>
+
+    <script>
+        const stampCanvas = document.getElementById('stampCanvas');
+        const ctx = stampCanvas.getContext('2d');
+        let drawing = false;
+        let uploadedStamp = null;
+        let finalImageCanvas = null;
+
+        stampCanvas.addEventListener('mousedown', () => drawing = true);
+        stampCanvas.addEventListener('mouseup', () => {
+            drawing = false;
+            ctx.beginPath();
+        });
+        stampCanvas.addEventListener('mousemove', draw);
+
+        function draw(event) {
+            if (!drawing) return;
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+            ctx.lineTo(event.clientX - stampCanvas.offsetLeft, event.clientY - stampCanvas.offsetTop);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(event.clientX - stampCanvas.offsetLeft, event.clientY - stampCanvas.offsetTop);
+        }
+
+        let stampDataURL;
+
+        function saveStamp() {
+            stampDataURL = stampCanvas.toDataURL();
+            alert('Stamp saved!');
+        }
+
+        document.getElementById('stampInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    uploadedStamp = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function applyStamp() {
+            const documentInput = document.getElementById('documentInput');
+            const documentImage = document.getElementById('documentImage');
+            
+            if (!documentInput.files[0]) {
+                alert('Please select a document.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    
+                    if (uploadedStamp) {
+                        const stampImg = new Image();
+                        stampImg.onload = function() {
+                            ctx.drawImage(stampImg, 50, 50, 100, 100);  // Adjust as needed
+                            resizeAndShowImage(canvas);
+                        }
+                        stampImg.src = uploadedStamp;
+                    } else if (stampDataURL) {
+                        const stampImg = new Image();
+                        stampImg.onload = function() {
+                            ctx.drawImage(stampImg, 50, 50, 100, 100);  // Adjust as needed
+                            resizeAndShowImage(canvas);
+                        }
+                        stampImg.src = stampDataURL;
+                    } else {
+                        alert('Please save or upload a stamp first.');
+                    }
+                }
+                img.src = event.target.result;
+            }
+            reader.readAsDataURL(documentInput.files[0]);
+        }
+
+        function resizeAndShowImage(canvas) {
+            finalImageCanvas = document.createElement('canvas');
+            const resizedCtx = finalImageCanvas.getContext('2d');
+            const scaleFactor = 0.5;  // Adjust this to resize the image (0.5 means reduce to 50%)
+            finalImageCanvas.width = canvas.width * scaleFactor;
+            finalImageCanvas.height = canvas.height * scaleFactor;
+            resizedCtx.drawImage(canvas, 0, 0, finalImageCanvas.width, finalImageCanvas.height);
+
+            const documentImage = document.getElementById('documentImage');
+            documentImage.src = finalImageCanvas.toDataURL();
+        }
+
+        function saveFinalImage() {
+            if (!finalImageCanvas) {
+                alert('No stamped document to save.');
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.href = finalImageCanvas.toDataURL();
+            link.download = 'stamped_document.png';
+            link.click();
+        }
+    </script>
+
+
+    <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">digisec</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+
+
+
+
+</body>
+
+</html>

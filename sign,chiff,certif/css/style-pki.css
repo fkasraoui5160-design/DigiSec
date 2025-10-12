@@ -1,0 +1,68 @@
+#pki-hero {
+    background-color: #7689a5;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#pki-details {
+    padding: 20px;
+}
+
+.service {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    padding: 8px;
+    margin: 5px 0 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #2648dfbd;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2648dfbd;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #2648dfbd;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #991329bd;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

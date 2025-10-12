@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>DigiSec</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-pki.css">
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="header_bottom">
+            <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="../index.html">
+                  <span>
+                   DigiSec
+                  </span>
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../about.html"> About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <section id="pki-hero">
+        <h1>Public Key Infrastructure (PKI) Services</h1>
+        <p>Building the foundation of your digital security with trusted certifications .</p>
+    </section>
+    <section id="pki-details">
+        <h2>Comprehensive PKI Solutions</h2>
+        <p>Our PKI services ensure secure electronic transactions and communications across your digital platforms. By managing keys and certificates, we provide a robust security framework that supports digital signatures and encryption, essential for protecting sensitive information.</p>
+        <ul>
+            <div class="service">
+                <h3>Digital Certificate Issuance and Management</h3>
+                <form id="certificateForm" action="/generate" method="post">
+                    <label for="countryName">Country Name (2 letter code):</label>
+                    <input type="text" id="countryName" name="country" required>
+
+                    <label for="stateOrProvinceName">State or Province Name (full name):</label>
+                    <input type="text" id="stateOrProvinceName" name="state" required>
+
+                    <label for="localityName">Locality Name (e.g., city):</label>
+                    <input type="text" id="localityName" name="city" required>
+
+                    <label for="organizationName">Organization Name (e.g., company):</label>
+                    <input type="text" id="organizationName" name="organization" required>
+
+                    <label for="organizationalUnitName">Organizational Unit Name (e.g., section):</label>
+                    <input type="text" id="organizationalUnitName" name="unit" required>
+
+                    <label for="commonName">Common Name (e.g., YOUR name):</label>
+                    <input type="text" id="commonName" name="commonName" required>
+
+                    <label for="emailAddress">Email Address:</label>
+                    <input type="email" id="emailAddress" name="email" required>
+                    
+                    <input type="submit" value="Generate Certificate">
+                </form>
+            </div>
+            
+        </ul>
+    </section>
+
+
+
+
+
+
+
+        <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+        <p>
+            &copy; <span id="displayDateYear"></span> All Rights Reserved By
+            <a href="https://html.design/">DigiSec</a>
+        </p>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+
+</body>
+
+</html>

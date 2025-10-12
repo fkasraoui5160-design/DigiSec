@@ -1,0 +1,212 @@
+/*
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #2d3d82bd;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2d3d82bd;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#downloadLink {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007BFF;
+}
+
+textarea, input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+*/
+
+body {
+    background: linear-gradient(135deg, #95b1c5, #95b1c5);
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(239, 237, 237, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 50pt;
+     
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #121111;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #2648dfbd;
+    color: #f9f4f4;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.div-class {
+    margin: 100pt; 
+}
+
+button:hover {
+    background-color: #2648dfbd;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1e1e1f;
+    border-radius: 5px;
+    text-align: center;
+    color: #555;
+}
+
+#downloadLink {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #991329bd;
+    text-decoration: none;
+}
+
+#downloadLink:hover {
+    color: #991329bd;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1a1919;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #991329bd;
+    outline: none;
+}
+
+
+.footer_section {
+    background-color:  #0e1c4a;
+    padding: 0; 
+}
+
+.footer_section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:  #0e1c4a;
+}
+
+.footer_section p {
+    margin: 0;
+    padding: 0;
+    color: #f7f3f3;
+    text-align: center;
+}
+
+.footer_section a {
+    color: #eef3f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer_section a:hover {
+    text-decoration: underline;
+}
+
+#documentImage {
+    max-width: 100%;
+    margin-top: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+canvas {
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#container-stamp{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

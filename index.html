@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trusted Services-WebSite</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123Street, Marrakech ,Maroc</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+212 00000</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Carousel Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-shield-alt me-2"></i>DigiSec</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                    <a href="about.html" class="nav-item nav-link"> À Propos </a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="price.html" class="dropdown-item">Plas Tarifaires </a>
+                            <a href="feature.html" class="dropdown-item">Nos fonctionnalités</a>
+                            <a href="testimonial.html" class="dropdown-item">Témoignages</a>
+                            <a href="quote.html" class="dropdown-item">Devis Gratuit</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Fiabilité & Sécurité</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solutions Numériques Fiables & Sécurisées</h1>
+                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Dévis gratuit</a>
+                            <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Fiabilité & Sécurité</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solutions Numériques Fiables & Sécurisées</h1>
+                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Dévis gratuit</a>
+                            <a href="contact.html" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Navbar & Carousel End -->
+
+
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <!-- Champ de recherche personnalisé pour vos services -->
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Recherchez un service (ex: Chiffrement, Hashage, SSL/TLS)">
+                        <button class="btn btn-primary px-4" onclick="searchService()"><i class="bi bi-search"></i> Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+  
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">À Propos de Nous</h5>
+                        <h1 class="mb-0">Votre Solution IT Innovante En Développement</h1>
+                    </div>
+                    <p class="mb-4 fadeIn">Nous sommes une entreprise spécialisée dans les solutions numériques sécurisées, offrant des services innovants en cybersécurité et en gestion de données sensibles. Grâce à notre expertise, nous aidons les entreprises à protéger leurs informations et à naviguer dans un monde numérique en toute confiance.</p>
+                
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Appelez-nous pour plus d'informations</h5>
+                            <h4 class="text-primary mb-0">+212 000000 </h4>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-3 slideInDown" data-wow-delay="0.9s">Contactez-nous</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/img.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Pourquoi nous choisir</h5>
+                <h1 class="mb-0">Nous protégeons vos données et renforçons votre sécurité numérique</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-shield-alt text-white"></i>
+                            </div>
+                            <h4>Expertise en Cybersécurité</h4>
+                            <p class="mb-0">Nos solutions innovantes vous protègent contre les menaces numériques, garantissant la confidentialité et l'intégrité de vos données.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-key text-white"></i>
+                            </div>
+                            <h4>Protection des Données</h4>
+                            <p class="mb-0">Nous assurons une gestion sécurisée et un stockage fiable de vos informations critiques.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s" src="img/feature.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-users-cog text-white"></i>
+                            </div>
+                            <h4>Solutions sur mesure</h4>
+                            <p class="mb-0">Nos services sont personnalisés pour répondre aux besoins spécifiques de votre entreprise.</p>
+                        </div>
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <h4>Support 24/7</h4>
+                            <p class="mb-0">Notre équipe est disponible à tout moment pour vous assister en cas d'incident ou de question.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Nos Services</h5>
+                <h1 class="mb-0">Solutions de Sécurité Numérique et d'Authentification</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-key text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Chiffrement</h4>
+                        <p class="m-0">Protégez vos données sensibles avec des algorithmes de chiffrement avancés garantissant leur confidentialité.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-hashtag text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Hashage</h4>
+                        <p class="m-0">Assurez l'intégrité de vos données grâce à des fonctions de hashage sécurisées et fiables.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-signature -alt text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Signature Numérique</h4>
+                        <p class="m-0">Garantissez l'authenticité de vos documents et échanges avec nos solutions de signature numérique.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-certificate text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Certificats</h4>
+                        <p class="m-0">Émettez et gérez des certificats numériques pour une identification sécurisée et une confiance accrue.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-clock text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Horodatage</h4>
+                        <p class="m-0">Ajoutez des marques temporelles fiables à vos documents et transactions pour une preuve irréfutable.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-qrcode text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Génération de Codes QR</h4>
+                        <p class="m-0">Générez des codes QR sécurisés et adaptés pour une transmission fiable et rapide des informations sensibles ou professionnelles.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon">
+                            <i class="fa fa-qrcode text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Chiffrement des E-mails</h4>
+                        <p class="m-0">Sécurisez vos communications par e-mail en utilisant un chiffrement de bout en bout pour garantir la confidentialité et l'intégrité de vos messages. Aucun tiers ne pourra accéder au contenu de vos e-mails.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="#">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Nos Offres</h5>
+                <h1 class="mb-0">Nous proposons des prix compétitifs pour nos services de confiance</h1>
+            </div>
+            <div class="row g-0">
+                <!-- Plan de Base -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Plan de Base</h4>
+                            <small class="text-uppercase">Pour les petites entreprises</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mois</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Chiffrement des données sensibles</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Hachage des mots de passe</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Génération de QR Codes sécurisés</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Horodatage des documents et transactions</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Certification SSL/TLS pour la sécurité des sites web</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Commander Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Standard -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Plan Standard</h4>
+                            <small class="text-uppercase">Pour les entreprises de taille moyenne</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mois</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Chiffrement des communications et transactions</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Hachage et stockage sécurisé des données</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Horodatage des documents et transactions</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Signature Numérique<i class="fa fa-times text-danger pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Commander Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Plan Avancé -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Plan Avancé</h4>
+                            <small class="text-uppercase">Pour les grandes entreprises</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mois</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Chiffrement des échanges internes et externes</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Hashage des fichiers et transactions critiques</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Certification SSL/TLS pour la sécurité des sites web</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Horodatage des documents légaux et financiers</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Commander Maintenant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+
+
+   <!-- Quote Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Demande de Devis</h5>
+                        <h1 class="mb-0">Besoin d'un devis gratuit ? N'hésitez pas à nous contacter</h1>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Réponse sous 24 heures</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Support téléphonique 24/7</h5>
+                        </div>
+                    </div>
+                    <p class="mb-4">
+                    Nous offrons une gamme complète de services spécialisés, notamment le chiffrement de données, la création de codes QR sécurisés, la génération de signatures numériques, et bien d'autres solutions adaptées à vos exigences.
+                    Contactez-nous dès aujourd'hui pour bénéficier d'une expertise sur mesure répondant à vos besoins professionnels.</p>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Appelez-nous pour toute question</h5>
+                            <h4 class="text-primary mb-0">+212 00000</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-xl-12">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Votre Nom" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Votre Email" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Sélectionnez un Service</option>
+                                        <option value="1">Chiffrement de données</option>
+                                        <option value="2">Hashage sécurisé</option>
+                                        <option value="3">Signature numérique</option>
+                                        <option value="4">Certificats numériques</option>
+                                        <option value="5">Horodatage</option>
+                                        <option value="6">Génération de codes QR</option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Votre Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark w-100 py-3" type="submit">Demander un Devis</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Future Testimonials Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Vos Avis Comptent</h5>
+                <h1 class="mb-0">Rejoignez nos clients satisfaits</h1>
+            </div>
+            <p class="text-center mb-4">Nous sommes dédiés à fournir des solutions de sécurité numériques qui font la différence. Votre retour est précieux pour nous. Essayez nos services et partagez votre expérience !</p>
+            <div class="text-center">
+                <a href="#contact" class="btn btn-primary py-3 px-5">Contactez-nous dès aujourd'hui</a>
+            </div>
+        </div>
+    </div>
+    <!-- Future Testimonials End -->
+   
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-shield-alt me-2"></i>DigiSec</h1>
+                        </a>
+                        <p class="mt-3 mb-4 text-white">Nous fournissons des solutions numériques modernes et sécurisées pour répondre aux besoins de votre entreprise, avec un engagement envers la qualité et la fiabilité.</p>
+                    
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Votre Email">
+                                <button class="btn btn-dark">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Contactez-nous</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">123 Rue, Marrakech, Maroc</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">info@example.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+212 00000</p>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Services-WebSite</a>. Tous droits réservés. 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up">↑</i></a>
+
+    
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

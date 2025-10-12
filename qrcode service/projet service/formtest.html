@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>DigiSec</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-encry.css">
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="header_bottom">
+            <div class="container-fluid">
+              <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="../../inded.html">
+                  <span>
+                    DigiSec
+                  </span>
+                </a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class=""> </span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../../about.html"> About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../../service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../../contact.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <script src="app-encrypt.js"></script>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Secure QR Code Generator</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Secure QR Code Generator</h1>
+            
+            <div class="form-group">
+                <label for="inputPlainText">Enter your text here:</label>
+                <textarea id="inputPlainText" rows="4"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <button onclick="generateEncryptionKey()">Generate Encryption Key</button>
+                <input type="text" id="inputEncryptionKey" placeholder="Encryption Key">
+            </div>
+    
+            <div class="form-group">
+                <button onclick="generateQRCodeFromText()">Generate QR Code</button>
+            </div>
+    
+            <!-- QR Code Section -->
+            <div id="qrcodeContainer" style="margin-top: 20px;"></div>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+        <script>
+            function generateEncryptionKey() {
+                const key = CryptoJS.lib.WordArray.random(16).toString();
+                document.getElementById('inputEncryptionKey').value = key;
+            }
+    
+            function generateQRCodeFromText() {
+                const key = document.getElementById('inputEncryptionKey').value;
+                if (!key) {
+                    alert('Please generate an encryption key first.');
+                    return;
+                }
+    
+                const plainText = document.getElementById('inputPlainText').value;
+                if (!plainText) {
+                    alert('Please enter text to encrypt.');
+                    return;
+                }
+    
+                // Encrypt the plaintext using the encryption key
+                const encryptedText = CryptoJS.AES.encrypt(plainText, key).toString();
+    
+                // Generate QR Code for the encrypted text (no display of encrypted text in the field)
+                generateQRCode(encryptedText);
+            }
+    
+            // Function to generate QR Code for encrypted text
+            function generateQRCode(encryptedText) {
+                const qrcodeElement = document.getElementById('qrcodeContainer');
+                qrcodeElement.innerHTML = '';  // Clear previous QR Code
+                new QRCode(qrcodeElement, {
+                    text: encryptedText,
+                    width: 128,
+                    height: 128,
+                    colorDark: "#007BFF",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        </script>
+    </body>
+    </html>
+    
+  
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://html.design/">DigiSec</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+
+</body>
+
+</html>
+    
+
+
+

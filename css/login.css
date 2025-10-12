@@ -1,0 +1,152 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000;
+  padding: 0 10px;
+  position: relative;
+}
+
+/* Background image */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('login.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.7);
+  z-index: -1; /* Place the background behind the content */
+}
+
+/* Wrapper styling */
+.wrapper {
+  width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  backdrop-filter: blur(100px); /* Flou de 20px */
+  background: rgba(65, 118, 210, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ebeff1;
+}
+
+/* Input fields */
+.input-field {
+  position: relative;
+  margin: 15px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Forget and remember section */
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget input[type="checkbox"] {
+  accent-color: #fff;
+  margin-right: 5px;
+}
+
+/* Buttons */
+button {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Register link */
+.register {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.register a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+#login-form, #signup-form {
+  display: none;
+}
+
+#login-form.active, #signup-form.active {
+  display: block;
+}
+
+
