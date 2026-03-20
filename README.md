@@ -24,5 +24,4 @@
 ## Auteur
 Fatima-Ezzahra Kasraoui
 
-## Remarques
-Projet simple mais fonctionnel, développé pour démontrer les services de sécurité web de base.
+
