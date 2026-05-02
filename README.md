@@ -1,4 +1,4 @@
-# DigiSec
+  # DigiSec
 
 **DigiSec** est une application web offrant plusieurs services de sécurité simples mais fonctionnels, développée pour démontrer les bases de la cybersécurité appliquée.
 
